@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-sm-2 mt-4">
                   <strong>Logins</strong><br>
-                  <i class="fa fa-eye"></i> <a href="{{ url('logins', [Auth::user()->encode_id]) }}">logins</a>
+                  <i class="fa fa-eye"></i> <a href="{{ url('logins', [$user->encode_id]) }}">logins</a>
                 </div>
             </div>
             </div>

@@ -68,7 +68,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find(\Hashids::decode($id)[0]);
-        dd($user);
+      
         $roles = Role::get();
         return view('admin.user.edit', compact('roles','user'));
     }
@@ -82,7 +82,7 @@ class UserController extends Controller
 
       
         $user = User::find(\Hashids::decode($id)[0]);
-        dd($user);
+       
         $user->update($request->except('role'));
 
         if ($request->has('role'))

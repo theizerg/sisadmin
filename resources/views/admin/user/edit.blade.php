@@ -53,11 +53,7 @@
                 <input class="form-control" id="last_name" name="last_name" value="{{ $user->last_name }}" placeholder="Apellidos">
                 <span class="missing_alert text-danger" id="last_name_alert"></span>
               </div>
-              <div class="form-group">
-                <label for="username">Usuario</label>
-                <input class="form-control" id="username" name="username" value="{{ $user->username }}" placeholder="Apellidos">
-                <span class="missing_alert text-danger" id="username_alert"></span>
-              </div>
+             
               <div class="form-group">
                 <label for="email">Correo Electrónico</label>
                 <input class="form-control" id="email" name="email" value="{{ $user->email }}" placeholder="Correo electrónico">
@@ -92,8 +88,8 @@
                 <label for="status_id">Acceso al sistema</label>
                 <div class="checkbox icheck">
                   <label>
-                    <input type="radio" name="status_id" value="5" {{ $user->status_id == 1 ? 'checked' : '' }}> Activo&nbsp;&nbsp;
-                    <input type="radio" name="status_id" value="6" {{ $user->status_id == 0 ? 'checked' : '' }}> Deshabilitado&nbsp;&nbsp;
+                    <input type="radio" name="status_id" value="1" {{ $user->status_id == 1 ? 'checked' : '' }}> Activo&nbsp;&nbsp;
+                    <input type="radio" name="status_id" value="2" {{ $user->status_id == 2 ? 'checked' : '' }}> Deshabilitado&nbsp;&nbsp;
                   </label>
                 </div>
               </div>
