@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="robots" content="noindex, nofollow">
     <link href="{{ asset('css/inicio.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+
     <link href="{{ asset('iconfont/material-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/system.css') }}" rel="stylesheet" />
 
@@ -19,9 +19,7 @@
     @yield('content')
 
     <!-- REQUIRED JS SCRIPTS -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/moment.js') }}"></script>
-    <script src="{{ asset('js/system.js') }}"></script>
+    <script src="{{ asset('js/inicio.js') }}"></script>>
     @stack('scripts')
   </body>
 </html>

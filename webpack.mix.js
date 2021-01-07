@@ -11,18 +11,11 @@ let mix = require('laravel-mix');
  |
  */
     /* js */
-    mix.js('resources/assets/js/app.js', 'public/js');
+    // mix.js('resources/assets/js/app.js', 'public/js');
 
     /* css */
-    mix.sass('resources/assets/sass/app.scss', 'public/css/app.sass.css')
-    .less('resources/assets/less/app.less', 'public/css/app.less.css');
-
-    /* Concatenate */
-    mix.styles([
-      'public/css/app.sass.css',
-      'public/css/app.less.css',
-      'public/css/custom.css'
-    ],'public/css/app.css');
+    mix.sass('resources/assets/sass/app.scss', 'public/css/inicio.css')
+        mix.js( 'resources/assets/js/app.js', 'public/js/inicio.js');
 
     /* copy */
     /*

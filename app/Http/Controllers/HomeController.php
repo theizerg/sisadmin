@@ -5,6 +5,7 @@ use App\Models\Pastor;
 use Carbon\Carbon;
 use DB;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use App\Models\User;
 class HomeController extends Controller
 {
@@ -25,8 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-         return view('admin.home.index');
+         $roles = Role::get();
+         return view('admin.home.index',compact('roles'));
 
 
    

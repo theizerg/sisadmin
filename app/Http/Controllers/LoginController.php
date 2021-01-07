@@ -24,10 +24,8 @@ class LoginController extends Controller
 
     public function show($id)
     {
-        $logins = Login::find(\Hashids::decode($id)[0]);
-        
-
-        return view('admin.login.index', ['logins' => $logins]);
+        $logins = Login::with('user')->find(\Hashids::decode($id)[0])->get();
+        return view('admin.login.show',compact('logins'));
 
     }
 

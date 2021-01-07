@@ -18,7 +18,7 @@
         <div class="col-md-6">
           <div class="btn-group">
            
-            <a href="{{ url('user/create') }}" class="btn blue darken-4 text-white"><i class="fa fa-plus-square"></i> Ingresar</a>
+            <a href="{{ url('user/create') }}" class="btn blue darken-4 text-white mr-5"><i class="fa fa-plus-square"></i> Ingresar</a>
            
           </div>
         </div>

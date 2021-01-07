@@ -32,7 +32,7 @@
             </div>
            {!!Form::open (['route'=>'user.store','id'=>'postulados_form'])!!}
             <div class="card-body">
-              <div class="form-group pading">
+              <div class="form-group mt-4">
                 <label for="name">Nombres</label>
                 <input class="form-control" id="name" name="name" >
                 <span class="missing_alert text-danger" id="name_alert"></span>

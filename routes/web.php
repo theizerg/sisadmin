@@ -26,12 +26,12 @@ Route::middleware(['auth',])->group(function () {
   Route::resource('user', 'UserController');
   Route::resource('logins', 'LoginController');
   Route::resource('permission', 'PermissionController');
+  Route::resource('roles', 'RolesController');
 
   /*********************************************************/
   /******************Modulo de administracion**************/
   /*******************************************************/
-  Route::resource('pastor', 'PastorController');
-    Route::resource('imprimir', 'ImprimirController');
+  
 
  /*******************************************************/
 /*******************************************************/

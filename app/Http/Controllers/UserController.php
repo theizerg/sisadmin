@@ -20,8 +20,8 @@ class UserController extends Controller
                        ->search($request->q)
                        ->orderBy('created_at', 'desc')
                        ->paginate(10);
-
-        return view('admin.user.index', ['users' => $users]);
+        $roles = Role::get();
+        return view('admin.user.index', compact('users','roles'));
     }
 
 

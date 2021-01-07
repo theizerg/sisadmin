@@ -18,6 +18,23 @@ class PermissionController extends Controller
     }
 
 
+    public function show($id)
+    {  if (!\Auth::user()->hasPermissionTo('VerPermisos'))
+        {
+        $notification = array(
+            'message' => '¡Acceso denegado!',
+            'alert-type' => 'danger'
+        );
+         return \Redirect::to('/')->with($notification);
+       }
+        $roles = Role::get();
+        $role = Role::findByName($id);
+        $name = $role->name;
+
+        return view('admin.permission.index',compact('name','role','roles'));
+    }
+
+
 
 
     public function update(UpdatePermission $request, $id)
