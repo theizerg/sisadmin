@@ -13,32 +13,35 @@
 
 @section('content')
 
-  
+  <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div class="btn-group">
           @can('VerUsuario')
-          <a href="{{ url('roles') }}" class="btn  blue darken-4 "><i class="fa fa-sort-alpha-desc"></i> Listado</a>
+          <a href="{{ url('roles') }}" class="btn  blue darken-4 text-white "><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('RegistrarUsuario')
-          <a href="{{ url('roles/create') }}" class="btn  blue darken-4 "><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('roles/create') }}" class="btn  blue darken-4 text-white "><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-12">
-       <div class="card card-danger card-outline">
+      <div class="col-sm-12">
+       <div class="card">
+        <div class="card-header blue-gradient-dark text-white outline-primary ">
+              <h3 class="card-title">Editar de rol</h3>
+          </div>
           <form class="form-horizontal" role="form" method="POST"
                               action="{{ url('/roles/'.$role->id) }}">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
             <div class="card-body">
               <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                  <label for="name" class="col-md-4 control-label">Nombre</label>
+                  <label for="name" class="col-sm-4 control-label">Nombre</label>
 
-                  <div class="col-md-6">
+                  <div class="col-sm-12">
                       <input id="name" type="text" class="form-control" name="name"
                              value="{{ $role->name }}" autofocus>
                       @if($errors->has('name'))
@@ -64,7 +67,7 @@
           
         </div>
         <div class="card-footer">
-              <button type="submit" class=" btn blue darken-4  ajax" id="submit">
+              <button type="submit" class=" btn blue darken-4 text-white  ajax" id="submit">
                 <i id="ajax-icon" class="fa fa-edit"></i> Editar
               </button>
             </div>
@@ -72,6 +75,6 @@
       </div>
     </div>
   </div>
-
+</div>
 
 @endsection

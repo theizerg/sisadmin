@@ -29,7 +29,8 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('admin.user.create');
+         $roles = Role::get();
+        return view('admin.user.create',compact('roles'));
     }
 
 
@@ -58,8 +59,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find(\Hashids::decode($id)[0]);
-
-        return view('admin.user.show', ['user' => $user]);
+         $roles = Role::get();
+        return view('admin.user.show',compact('roles','user'));
     }
 
 

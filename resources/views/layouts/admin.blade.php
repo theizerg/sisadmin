@@ -8,10 +8,10 @@
         <meta name="robots" content="noindex, nofollow">
 
 
-        <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/apps.css') }}">
         <link rel="stylesheet" href="{{ asset('css/system.css') }}">
         <link rel="stylesheet" href="{{ asset('iconfont/material-icons.css') }}">
-        <link rel="icon" href="{{ asset('images/logo/logo-imagen.png') }}">
+        <link rel="icon" href="{{ asset('images/logo/logo.png') }}">
             <!-- Material Icons -->
             <link rel="stylesheet" href="/assets/googlefonts/css/css.css">
 
@@ -22,7 +22,7 @@
         <div class="wrapper" id="body">
 
 
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light" id="sidebar">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light blue-gradient-dark">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
         <li class="nav-item">
@@ -51,13 +51,13 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu" >
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"  style="color:white;">
+                    <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown">
                     <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
                     <span class="fa fa fa-user"></span>
                     <span class="hidden-xs">{{ Auth::user()->full_name}} </span>
                     </a>
-                    <ul class="dropdown-menu"  style="color:#ffff;">
-                    <li class="user-header" id="opciones">
+                    <ul class="dropdown-menu text-white">
+                    <li class="user-header blue darken-4">
                        <!-- <img src="{{ asset('images/user/user1-128x128.jpg') }}" class="img-circle" alt="User Image">-->
                         <i class="fa fa-user fa-5x" style="color:#fff;"></i>
                         <p>
@@ -71,7 +71,7 @@
                     </li>
                     <li class="user-footer">
                       <div class="float-left">
-                        <a href="{{ url('user', [Auth::user()->id]) }}" class="btn btn-default btn-flat">
+                        <a href="{{ url('user', [Auth::user()->encode_id]) }}" class="btn btn-default btn-flat">
                             <i class="fa fa-eye"></i> Datos
                         </a>
                         </div>
@@ -144,9 +144,9 @@
 
         <!-- REQUIRED JS SCRIPTS -->
         <!-- jQuery -->
-        <script src="{{asset('js/inicio.js')}}"></script>
+        <script src="{{asset('js/apps.js')}}"></script>
         <script src="{{ asset('js/system.js') }}"></script>
-         <script src="{{ asset('js/app.js') }}"></script>
+        
          <script>
 
          @if(Session::has('message'))
@@ -177,7 +177,7 @@
         #sidebar{
 
 
-                background:linear-gradient(to right,#f44336,#c62828,#b71c1c);
+                
                 }
 
 

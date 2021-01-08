@@ -12,13 +12,13 @@
     @endsection
 
     @section('content')
-
+     <div class="container">
         @can('CrearRol')
         <div class="row">
             <div class="col-md-6">
                 <div class="btn-group">
 
-                <a href="{{ url('roles/create') }}" class="btn btn  blue darken-4 "><i class="fa fa-plus-square"></i> Ingresar</a>
+                <a href="{{ url('roles/create') }}" class="btn text-white  blue darken-4 "><i class="fa fa-plus-square"></i> Ingresar</a>
 
 
                 </div>
@@ -26,10 +26,10 @@
             </div>
              @endcan
         <br>
-        <div class="card card-danger card-outline">
-                <div class=" card-header">
-                <h3 class="card-title">Listado de usuario</h3>
-                </div>
+        <div class="card card-danger ">
+          <div class="card-header blue-gradient-dark text-white outline-primary ">
+              <h3 class="card-title">Listado de roles</h3>
+          </div>
                 <!-- /.card-header -->
                 <div class="card-body table-responsive">
                 <table id="example" class="table table-striped" style="width:100%">
@@ -43,7 +43,7 @@
                     <tbody>
                     @foreach ($roles as $role)
                     <td>{{ $role->name }}</td>
-                     <td><span class="badge  elevation-3 text-white fa-1x {{ $role->status_id ? 'green' : 'red' }}">{{ $role->display_status }}</span></td>
+                     <td><span class="badge fa-1x  elevation-2 text-white fa-1x {{ $role->status_id ? 'green' : 'red' }}">{{ $role->display_status }}</span></td>
                      <td>
 
                         @can('EditarRol')
@@ -63,7 +63,7 @@
                 <!-- /.card-body -->
             </div>
 
-
+</div>
 <div class="modal fade" id="confirm-delete" tabindex="-1"
          role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">

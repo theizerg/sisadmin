@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Login;
+use Spatie\Permission\Models\Role;
 
 class LoginController extends Controller
 {
@@ -13,10 +14,10 @@ class LoginController extends Controller
 
 
     public function index(Request $request)
-    {
+    { 
         $logins = Login::WithUser()->search($request->q)->orderBy('login_at', 'desc')->paginate(10);
-
-        return view('admin.login.index', ['logins' => $logins]);
+        $roles = Role::get();
+        return view('admin.login.index',  compact('roles','logins'));
     }
 
 
@@ -25,7 +26,8 @@ class LoginController extends Controller
     public function show($id)
     {
         $logins = Login::with('user')->find(\Hashids::decode($id)[0])->get();
-        return view('admin.login.show',compact('logins'));
+        $roles = Role::get();
+        return view('admin.login.show',compact('logins','roles'));
 
     }
 

@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col-md-6">
         <div class="btn-group">
-          <a href="{{ url('user') }}" class="btn blue darken-4 text-white"><i class="fa fa-sort-alpha-desc"></i> Listado</a>         
+          <a href="{{ url('user') }}" class="btn blue darken-4 text-white"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>         
           <a href="{{ url('user/create') }}" class="btn blue darken-4 text-white"><i class="fa fa-plus-square"></i> Ingresar</a>
         </div>
       </div>
@@ -26,7 +26,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-         <div class="card-header card-header-primary outline-primary " style="background: #0d47a1;">
+         <div class="card-header  outline-primary blue-gradient-dark text-white">
               <h3 class="card-title">Crear usuarios</h3>
              
             </div>

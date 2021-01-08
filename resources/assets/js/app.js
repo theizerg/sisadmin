@@ -30,6 +30,8 @@ toastr.options.preventDuplicates = true;
 /* iCheck */
 require('icheck');
 
+/* devbridge-autocomplete */
+require('devbridge-autocomplete');
 /* Chart js */
 require('chart.js/dist/Chart.min.js');
 
@@ -37,13 +39,14 @@ require('chart.js/dist/Chart.min.js');
 /* Datatables.net responsive*/
 require('@iconify/iconify');
 
- // ### Datatables
-window.JSZip = require( 'jszip' );
 require( 'datatables.net-bs4' );
 require( 'datatables.net-buttons-bs4' );       
 require( 'datatables.net-buttons/js/buttons.html5.js' );
 require( 'datatables.net-buttons/js/buttons.print.js' );
 require( 'datatables.net-responsive-bs4' );
+
+ // ### Datatables
+window.JSZip = require( 'jszip' );
 
 // pdfMake
 var pdfMake = require('pdfmake/build/pdfmake.js');

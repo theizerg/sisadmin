@@ -18,11 +18,9 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header-primary">
-              <h3 class="card-title">Registros de logins</h3>
-              <div class="card-tools">
-              </div>
-            </div>
+            <div class="card-header blue-gradient-dark text-white outline-primary ">
+              <h3 class="card-title">Listado de inicio de sesión</h3>
+          </div>
             <div class="card-body table-responsive table-striped">
               <table id="example2" class="table table-bordered table-hover">
                 <thead>

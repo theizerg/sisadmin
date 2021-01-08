@@ -12,6 +12,11 @@
   }
 /*** Global ***/
 
+
+.blue-gradient-dark{
+  background:linear-gradient(to right,#2B89D2,#0C59A7,#085E90);
+}
+
 .mdb-color.lighten-5 {
   background-color: #d0d6e2 !important;
 }

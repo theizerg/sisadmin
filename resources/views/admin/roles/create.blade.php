@@ -12,15 +12,15 @@
 @endsection
 
 @section('content')
- 
+ <div class="container">
     <div class="row">
       <div class="col-md-6">
         <div class="btn-group">
           @can('CrearRol')
-          <a href="{{ url('roles') }}" class="btn btn-danger"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
+          <a href="{{ url('roles') }}" class="btn blue darken-4 text-white"><i class="fas fa-sort-alpha-down-alt"></i> Listado</a>
           @endcan
           @can('CrearRol')
-          <a href="{{ url('roles/create') }}" class="btn btn-danger"><i class="fa fa-plus-square"></i> Ingresar</a>
+          <a href="{{ url('roles/create') }}" class="btn blue darken-4 text-white"><i class="fa fa-plus-square"></i> Ingresar</a>
           @endcan
         </div>
       </div>
@@ -29,7 +29,10 @@
     <div class="row">
       <div class="col-md-12">
  
-        <div class="card card-danger card-outline">
+        <div class="card">
+          <div class="card-header blue-gradient-dark text-white outline-primary ">
+              <h3 class="card-title">Crear de rol</h3>
+          </div>
 
            {{ Form::open(array('url' => 'roles')) }}       
         
@@ -37,7 +40,7 @@
               @include('admin.roles.partials.form')
             </div>
             <div class="card-footer">
-              <button type="submit" class="btn btn-danger ajax" id="submit">
+              <button type="submit" class="btn blue darken-4 text-white ajax" id="submit">
                 <i id="ajax-icon" class="fas fa-save"></i> Ingresar
               </button>
             </div>
@@ -45,6 +48,6 @@
         </div>
       </div>
     </div>
-
+</div>
 
 @endsection

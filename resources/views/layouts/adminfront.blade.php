@@ -6,7 +6,7 @@
     <title>{{ env('APP_NAME') }} - @yield('title')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="robots" content="noindex, nofollow">
-    <link href="{{ asset('css/inicio.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/apps.css') }}" rel="stylesheet" />
 
     <link href="{{ asset('iconfont/material-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/system.css') }}" rel="stylesheet" />
@@ -19,7 +19,7 @@
     @yield('content')
 
     <!-- REQUIRED JS SCRIPTS -->
-    <script src="{{ asset('js/inicio.js') }}"></script>>
+    <script src="{{ asset('js/apps.js') }}"></script>>
     @stack('scripts')
   </body>
 </html>
